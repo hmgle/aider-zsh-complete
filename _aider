@@ -212,7 +212,7 @@ editors=(
 # Main completion arguments
 _arguments -C \
     '(-h --help)'{-h,--help}'[Show help message and exit]' \
-    '(-v --version)'{-v,--version}'[Show version and exit]' \
+    '(-v --verbose)'{-v,--verbose}'[Enable verbose output]' \
     '(--verbose)'--verbose'[Enable verbose output]' \
     '(--quiet)'--quiet'[Disable verbose output]' \
     '(--config)'--config'[Specify config file]:config file:_files' \
