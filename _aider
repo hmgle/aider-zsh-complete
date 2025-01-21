@@ -334,7 +334,7 @@ _arguments -C \
     '(--copy-paste)'--copy-paste'[Enable automatic copy/paste of chat between aider and web UI]' \
     '(--no-copy-paste)'--no-copy-paste'[Disable automatic copy/paste of chat between aider and web UI]' \
     '(--apply)'--apply'[Apply the changes from the given file instead of running the chat]:apply file:_files' \
-    '(--apply-clipboard-edits)'--apply-clipboard-edits'[Apply clipboard contents as edits using the main model\'s editor format]' \
+    '(--apply-clipboard-edits)'--apply-clipboard-edits'[Apply clipboard contents as edits using the main model'\''s editor format]' \
     '(--exit)'--exit'[Do all startup activities then exit before accepting user input]' \
     '(--show-repo-map)'--show-repo-map'[Print the repo map and exit]' \
     '(--show-prompts)'--show-prompts'[Print the system prompts and exit]' \
