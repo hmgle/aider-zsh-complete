@@ -1,6 +1,6 @@
 # aider-zsh-complete
 
-Zsh completion script for the `aider` command-line tool.
+Zsh completion script for the [`aider`](https://aider.chat/) command-line tool.
 
 ## Installation
 
