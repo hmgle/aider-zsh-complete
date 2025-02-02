@@ -17,6 +17,16 @@ model_options=(
     'deepseek/deepseek-chat'
     'o1-mini'
     'o1-preview'
+    'o3-mini'
+    'openrouter/deepseek/deepseek-r1:free'
+)
+
+# Define completion for reasoning effort levels
+local -a reasoning_effort
+reasoning_effort=(
+    'low'
+    'medium'
+    'high'
 )
 
 # Define completion for code themes
@@ -360,6 +370,7 @@ _arguments -C \
     '(--detect-urls)'--detect-urls'[Enable detection and offering to add URLs to chat]' \
     '(--no-detect-urls)'--no-detect-urls'[Disable detection and offering to add URLs to chat]' \
     '(--editor)'--editor'[Specify which editor to use for the /editor command]:editor:(${editors})' \
+    '(--reasoning-effort)'--reasoning-effort'[Specify reasoning effort level]:reasoning effort:(${reasoning_effort})' \
     '*:files:_files'
 
 return 0
