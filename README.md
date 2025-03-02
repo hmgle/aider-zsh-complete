@@ -31,8 +31,7 @@ Add the following lines to your `~/.zshrc` file:
 fpath=(~/.zsh/completions $fpath)
 
 # Initialize the completion system
-autoload -Uz compinit
-compinit
+autoload -U compinit && compinit -u
 ```
 
 ### Step 4: Reload Zsh Configuration
