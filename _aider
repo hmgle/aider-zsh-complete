@@ -19,6 +19,7 @@ model_options=(
     'o1-preview'
     'o3-mini'
     'openrouter/deepseek/deepseek-r1:free'
+    'anthropic/claude-3-7-sonnet-20250219'
 )
 
 # Define completion for reasoning effort levels
@@ -226,11 +227,11 @@ _arguments -C \
     '(-v --verbose)'{-v,--verbose}'[Enable verbose output]' \
     '(--verbose)'--verbose'[Enable verbose output]' \
     '(--quiet)'--quiet'[Disable verbose output]' \
-    '(--config)'--config'[Specify config file]:config file:_files' \
+    '(-c --config)'{-c,--config}'[Specify the config file]:config file:_files' \
     '(--output)'--output'[Specify output file]:output file:_files' \
     '(--model)'--model'[Specify the model to use for the main chat]:model:(${model_options})' \
     '(--opus)'--opus'[Use claude-3-opus-20240229 model for the main chat]' \
-    '(--sonnet)'--sonnet'[Use claude-3-5-sonnet-20241022 model for the main chat]' \
+    '(--sonnet)'--sonnet'[Use anthropic/claude-3-7-sonnet-20250219 model for the main chat]' \
     '(--haiku)'--haiku'[Use claude-3-5-haiku-20241022 model for the main chat]' \
     '(--4)'--4'[Use gpt-4-0613 model for the main chat]' \
     '(--4o)'--4o'[Use gpt-4o model for the main chat]' \
@@ -256,6 +257,16 @@ _arguments -C \
     '(--verify-ssl)'--verify-ssl'[Verify the SSL cert when connecting to models]' \
     '(--no-verify-ssl)'--no-verify-ssl'[Do not verify the SSL cert when connecting to models]' \
     '(--timeout)'--timeout'[Timeout in seconds for API calls]:timeout:' \
+    '(--thinking-tokens)'--thinking-tokens'[Set the thinking token budget for models that support it]:thinking tokens:' \
+    '(--auto-accept-architect)'--auto-accept-architect'[Enable automatic acceptance of architect changes]' \
+    '(--no-auto-accept-architect)'--no-auto-accept-architect'[Disable automatic acceptance of architect changes]' \
+    '(--check-model-accepts-settings)'--check-model-accepts-settings'[Check if model accepts settings like reasoning_effort/thinking_tokens]' \
+    '(--no-check-model-accepts-settings)'--no-check-model-accepts-settings'[Do not check if model accepts settings like reasoning_effort/thinking_tokens]' \
+    '(--git-commit-verify)'--git-commit-verify'[Enable git pre-commit hooks with --no-verify]' \
+    '(--no-git-commit-verify)'--no-git-commit-verify'[Disable git pre-commit hooks with --no-verify]' \
+    '(--notifications)'--notifications'[Enable terminal bell notifications when LLM responses are ready]' \
+    '(--no-notifications)'--no-notifications'[Disable terminal bell notifications when LLM responses are ready]' \
+    '(--notifications-command)'--notifications-command'[Specify a command to run for notifications instead of the terminal bell]:notifications command:' \
     '(--edit-format)'--edit-format'[Specify what edit format the LLM should use]:edit format:(diff whole)' \
     '(--architect)'--architect'[Use architect edit format for the main chat]' \
     '(--weak-model)'--weak-model'[Specify the model to use for commit messages and chat history summarization]:weak model:(${model_options})' \
